@@ -5,6 +5,7 @@
  Moves the servo if there is a deviation to desired/wanted direction 
  tested with UNO and NANO Boards
  written for ARDUINO
+ Paul Seren / Germany / 07.01.2022 Ver. 0.9
 */
 /**************************************************************************/
 #include <Wire.h>
