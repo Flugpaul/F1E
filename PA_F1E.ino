@@ -139,7 +139,7 @@ void setup() {
        display.println("No BNO055 detected");
        display.display();
         */
-     Oprintln ("No 111 BNO055 detected");
+     Oprintln ("No BNO055 detected");
      while(1);
   }
 
@@ -294,8 +294,13 @@ void F1E_Get_Wanted_Trim ()
     sensor = analogRead(potiPin);
     pwm_F1E = map(sensor, 0, 1023, 0, maxTrim) - maxTrim/2;
     
-    // new wanted bearing
+    // new wanted trim
     centerGrad = centerGrad - (pwm_F1E-pwmOld);
+    // adjust min and max Grad
+    minGrad=minGrad-(pwm_F1E-pwmOld);
+    maxGrad=maxGrad-(pwm_F1E-pwmOld);
+    pwmOld = pwm_F1E; 
+
     return;
   }
 /**************************************************************************/
@@ -312,11 +317,8 @@ void F1E_Get_Wanted_Bearing ()
     
     // new wanted bearing
     wanted_Bearing = current_Bearing;
-    centerGrad = centerGrad - (pwm_F1E-pwmOld);
-    minGrad=minGrad-(pwm_F1E-pwmOld);
-    maxGrad=maxGrad-(pwm_F1E-pwmOld);
-    pwmOld = pwm_F1E; 
-
+    
+   
     // Move servo position to the (new) middle position
     // servoPos = centerGrad;
     //Serial.print("Sensor = ");
