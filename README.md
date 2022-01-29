@@ -23,6 +23,8 @@ One of the most challenging issues was the choice of an appropriate magnetic sen
 
 The research was very time-consuming, so I decided to make all details like the coding and the circuit diagram pubic via the github repository (https://github.com/Flugpaul/F1E ). As a former manager for knowledge management in a worldwide company I know that sharing knowledge is useful for the progress of development.  With starting the first flight evaluations I will complete the content. 
 
+A short indroduction for the use of this steering you will find here: https://vimeo.com/663940238 
+
 Feel free to use, comment, add, discuss what I have designed. I would be happy about the feedback from the freeflight/F1E community. 😊 
 
 Thx for the support and motivation to Johannes Seren ("make it more professional from the beginning") and Thomas Seren ("include a PID-controller for a good damping")
